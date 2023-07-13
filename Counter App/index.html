@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <script src="counter.js"></script>
+    <style>
+
+        *{
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #main p{
+            text-align: center;
+            font-size: 40px;
+        }
+
+
+        #functionality h1{
+
+            text-align: center;
+        }
+
+        #functionality{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 80px;
+            align-items: center;
+        }
+        
+        #functionality>div>button:nth-child(3){
+            margin-left: 40px;
+        }
+        button{
+            font-size: 18px;
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        <p>{{ message }}</p>
+    </div>
+
+    <div id="functionality">
+        <counter></counter>
+      </div>
+    
+      <script>
+        new Vue({
+          el: '#functionality'
+        });
+      </script>
+    
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script> -->
+
+    <script>
+
+        let main = new Vue({
+        el: '#main',
+        data: {
+            message: 'Hello World!'
+        }
+        })
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
